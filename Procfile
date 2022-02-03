@@ -1,0 +1,1 @@
+web: gunicorn wish_gift.wsgi
