@@ -11,8 +11,12 @@
       />
     </div>
     <div v-else>
-      <CreatedList/>
-    <PreviousList/>
+      <CreatedList 
+        :createdList="createdList"
+      />
+    <PreviousList
+      :previousList="previousList"
+    />
     </div>
     
   </div>
