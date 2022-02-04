@@ -1,12 +1,14 @@
 <template>
   <div>
     <div>Created List Placeholder</div>
-    <p>TODO: show the list that the user just created</p>
+    <p>{{ createdList.owner }}</p>
+    <p>{{ createdList.listItem }}</p>
   </div>
 </template>
 
 <script>
 export default {
   name: 'CreatedList',
+  props: ['createdList']
 }
 </script>

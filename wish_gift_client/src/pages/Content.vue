@@ -16,10 +16,22 @@
           <PreviousList/>
         </div>
     </div>
+
+    <div v-else>
+      <CreatedList 
+        :createdList="createdList"
+      />
+    <PreviousList
+      :previousList="previousList"
+    />
+    </div>
+    
   </div>
 </template>
 
 <script>
+import axios from 'axios'
+import { BASE_URL } from '../globals'
 import About from '../components/About.vue'
 import CreatedList from '../components/CreatedList.vue'
 import NewList from '../components/NewList.vue'
@@ -44,14 +56,14 @@ export default {
       this[name] = value
     },
     handleSubmit() {
-      // TODO
-      // api call here to assign previousList and createdList
-      alert('Form Submitted')
+      this.handleAPICalls()
 
-      // TODO
-      this.previousList = {placeholder: 'placeholder'}
-      this.createdList = {placeholder: 'placeholder'}
-
+    },
+    async handleAPICalls() {
+      const allLists = await axios.get(`${BASE_URL}`)
+      this.previousList = allLists.data[allLists.data.length - 1]
+      const newList = await axios.get(`${BASE_URL}lists/new/${this.name}/${this.listItem}`)
+      this.createdList = newList.data[newList.data.length - 1]
     }
   }
 }
