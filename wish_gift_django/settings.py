@@ -79,8 +79,11 @@ WSGI_APPLICATION = 'wish_gift_django.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'wish_gift',
+        'USER': 'wish_gift_user',
+        'PASSWORD': 'wish_gift',
+        'HOST': 'localhost'
     }
 }
 
