@@ -5,5 +5,6 @@ urlpatterns = [
     path('', views.gift_list, name='gift_list'),
     path('lists/<int:pk>', views.gift_detail, name='gift_detail'),
     path('lists/<int:pk>/delete', views.gift_delete, name='gift_delete'),
-    path('lists/new', views.gift_create, name='gift_create'),
+    path('lists/new/<str:new_owner>/<str:new_listItem>',
+         views.gift_create, name='gift_create')
 ]
