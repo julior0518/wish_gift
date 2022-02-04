@@ -1,6 +1,6 @@
 # **_Wish Gift_**
 
-<img src=img/wish_list03.png alt="wish-list-app" width="450" />
+<img src=img/wish_list05.png alt="wish-list-app" width="450" />
 
 ##### Wish Gift is a fast growing app that allows friends and family to send and receive gifts, secret santa style...
 
@@ -33,7 +33,7 @@
 
 #### Friends, Family and Co-workers can add the number of people in the group and share their lists among each other. Once the group has entered in their wishes, they will have one chance to make any changes, after which, patrons will not be able to edit and the wishlist will become permanent. <br>
 
-<img src=img/wish_list02.jpeg alt="wish-list-paper-white" width="250" />
+<img src=img/wish_list04.png alt="wish-list-data-entry" width="450" />
 
 ---
 
@@ -75,7 +75,7 @@ VS Code || Postgres || VUE || Django
 
 ##### **_Terra Smith_** - README resolution; troubleshooting and debugging assistance. 
 
-<img src=img/.png alt="Wish Gift" width="550" />
+<img src=img/wish_list02.jpeg alt="wish-list-paper-white" width="250" />
 
 <br>
 
