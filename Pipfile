@@ -10,9 +10,10 @@ whitenoise = "*"
 dj-database-url = "*"
 gunicorn = "*"
 django-cors-headers = "*"
+python-dotenv = "*"
 djangorestframework = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.6"
+python_version = "3.9"

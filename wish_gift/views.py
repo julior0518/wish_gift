@@ -1,12 +1,32 @@
-from rest_framework import generics
-from .serializers import ListSerializer
+# views.py
+from django.http import JsonResponse
 from .models import List
+from django.shortcuts import redirect
+from .forms import ListForm
 
-class ListList(generics.ListCreateAPIView):
-    queryset = List.objects.all()
-    serializer_class = ListSerializer
 
-class ArtistDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = List.objects.all()
-    serializer_class = ListSerializer
+def gift_list(request):
+    gifts = List.objects.all().values('id', 'owner', 'listItem')
+    gift_list = list(gifts)
+    return JsonResponse(gift_list, safe=False)
+
+
+def gift_detail(request, pk):
+    gift = List.objects.get(id=pk)
+    data = {'id': gift.id, 'owner': gift.owner, 'listItem': gift.listItem}
+    return JsonResponse(data, safe=False)
+
+
+# def gift_create(request, owner1, listItem1):
+def gift_create(request):
+    print(request)
+    # owner = request.data.get('owner')
+    # listItem = request.data.get('listItem')
+    gift = List.objects.create(owner="Jashi", listItem="Computer")
+    return redirect('gift_list')
+
+
+def gift_delete(request, pk):
+    List.objects.get(id=pk).delete()
+    return redirect('gift_list')
 
