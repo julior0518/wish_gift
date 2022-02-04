@@ -29,3 +29,4 @@ def gift_create(request):
 def gift_delete(request, pk):
     List.objects.get(id=pk).delete()
     return redirect('gift_list')
+
