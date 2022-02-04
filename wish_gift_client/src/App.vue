@@ -1,6 +1,5 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+  <div id="app" class="app">
     <Content/>
   </div>
 </template>
@@ -16,12 +15,15 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Permanent Marker', cursive;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  color:rgb(100, 100, 100)
 }
+
 </style>
