@@ -1,7 +1,6 @@
 <template>
-  <div>
-    <div>Created List Placeholder</div>
-    <p>{{ createdList.owner }}</p>
+  <div class="created">
+    <div>{{ createdList.owner }} you wished for:</div>
     <p>{{ createdList.listItem }}</p>
   </div>
 </template>
@@ -12,3 +11,13 @@ export default {
   props: ['createdList']
 }
 </script>
+
+<style>
+.created {
+  text-align: center;
+}
+p {
+  font-family: 'Caveat';
+  font-size: 18px;
+}
+</style>

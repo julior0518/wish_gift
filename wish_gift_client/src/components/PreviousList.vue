@@ -1,8 +1,7 @@
 <template>
-  <div>
-    <div>Previous List Placeholder</div>
-    <p>{{ previousList.owner }}</p>
-    <p>{{ previousList.listItem }}</p>
+  <div class="previous">
+    <div>and</div>
+    <p>{{ previousList.owner }} wished for {{ previousList.listItem }} </p>
   </div>
 </template>
 
@@ -12,3 +11,10 @@ export default {
   props: ['previousList']
 }
 </script>
+
+<style>
+.previous {
+  text-align: center;
+}
+
+</style>

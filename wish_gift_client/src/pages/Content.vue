@@ -1,8 +1,7 @@
 <template>
   <div id="content">
     <div class="margin">
-        <h2 >Content Placeholder</h2>
-        <About/>
+        <h2 >Make a wish</h2>
         <div v-if="!previousList && !createdList">
           <NewList
             :name='name'
@@ -12,19 +11,16 @@
           />
         </div>
         <div v-else>
-          <CreatedList/>
-          <PreviousList/>
+          <CreatedList 
+            :createdList="createdList"
+            />
+            <PreviousList
+            :previousList="previousList"
+            />
         </div>
+        <About/>
     </div>
-
-    <div v-else>
-      <CreatedList 
-        :createdList="createdList"
-      />
-    <PreviousList
-      :previousList="previousList"
-    />
-    </div>
+  
     
   </div>
 </template>
@@ -91,7 +87,7 @@ export default {
   height: 100vh;
   text-align: left;
   margin: 0 80px;
-  text-indent: 20px;
+  padding-left: 20px;
 
 }
 
