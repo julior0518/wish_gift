@@ -1,16 +1,16 @@
 <template>
-  <div>
-    <form v-on:submit="handleSubmit">
+  <div >
+    <form class="new" v-on:submit="handleSubmit">
       <input 
         @input="handleChange"
-        placeholder="Name"
+        placeholder="name"
         :value="name"
         type="text"
         name="name"
       />
       <input 
         @input="handleChange"
-        placeholder="Gift"
+        placeholder="wish"
         :value="listItem"
         type="text"
         name="listItem"
@@ -35,3 +35,36 @@ export default {
   }
 }
 </script>
+
+<style>
+
+.new {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+
+}
+input {
+  border: none;
+  background: rgba(255, 0, 0, 0);
+  padding: 10px 0;
+}
+input:hover {
+  text-decoration: underline;
+}
+
+button {
+  margin-top: 10px;
+  width: 100px;
+  border: none;
+  font-size: 10;
+  padding:4px 0;
+  background-color: rgba(165, 42, 42, 0.185);
+  border-radius: 25px;
+
+}
+button:hover {
+  background-color: rgba(165, 42, 42, 0.329);
+
+}
+</style>
