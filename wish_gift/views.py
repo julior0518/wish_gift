@@ -17,12 +17,8 @@ def gift_detail(request, pk):
     return JsonResponse(data, safe=False)
 
 
-# def gift_create(request, owner1, listItem1):
-def gift_create(request):
-    print(request)
-    # owner = request.data.get('owner')
-    # listItem = request.data.get('listItem')
-    gift = List.objects.create(owner="Jashi", listItem="Computer")
+def gift_create(request, new_owner, new_listItem):
+    gift = List.objects.create(owner=new_owner, listItem=new_listItem)
     return redirect('gift_list')
 
 
